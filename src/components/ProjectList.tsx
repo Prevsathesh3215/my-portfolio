@@ -13,7 +13,7 @@ import { ProjectListProps } from "@/types";
 
 export default function ProjectList({ data }: ProjectListProps) {
   {
-    /* Yes, if you're wondering, i did write this shit myself hahaha */
+    /* Yes, if you're wondering, i did write this shit myself hahaha. GG this component was damn fun to build */
   }
 
   return (

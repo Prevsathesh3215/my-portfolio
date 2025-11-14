@@ -1,8 +1,9 @@
 import Phaser from "phaser";
 import Knight from "./knight";
 import Mage from "./mage";
-import Minotaur from "./minotaur";
 import Enemy from "./enemy";
+
+/**Damn this thing was a headache, worth it tho */
 
 function getAssetPath(path) {
   console.log(import.meta.env.BASE_URL);

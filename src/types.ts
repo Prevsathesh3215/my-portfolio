@@ -14,3 +14,5 @@ export interface ProjectsData {
 export interface ProjectListProps {
   data: ProjectsData
 }
+
+{/**ProjectListProps -> ProjectsData -> Project. 1st checks for data only, 2nd checks for headTitle and items types, and third checks for item obj types. Good shit */}

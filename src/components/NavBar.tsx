@@ -1,6 +1,6 @@
 import { FaCode, FaReact } from "react-icons/fa";
 import { Button } from "./ui/button";
-import EncryptText from "./EncryptText";
+import { FaGithub } from "react-icons/fa";
 
 export default function NavBar() {
   return (
@@ -21,7 +21,13 @@ export default function NavBar() {
           /> */}
         </div>
 
+        {/**Welp, I first deployed here, 0210 hrs, 15/11/2025. Gg need to work on this tho */}
         <div className="flex justify-right mx-2 gap-2 mt-2">
+          <Button onClick={() => window.open("https://github.com/Prevsathesh3215/my-portfolio", "_blank")}>
+            {" "}
+            <FaGithub />
+            View the code
+          </Button>
           <Button>About</Button>
           <Button>Projects</Button>
           <Button>Contact</Button>
