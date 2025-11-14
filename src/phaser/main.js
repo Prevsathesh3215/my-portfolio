@@ -5,7 +5,9 @@ import Minotaur from "./minotaur";
 import Enemy from "./enemy";
 
 function getAssetPath(path) {
-  return path.startsWith("/") ? `/assets${path}` : path;
+  console.log(import.meta.env.BASE_URL);
+  // import.meta.env.BASE_URL points to '/my-portfolio/' in production on GitHub Pages
+  return import.meta.env.BASE_URL + "assets" + path;
 }
 
 async function ensureFontLoaded() {
@@ -58,7 +60,7 @@ function createTextWithFont(
   color = "#ffffff",
   backgroundColor = null,
   padding = null,
-  align = false,
+  align = false
 ) {
   const fontFamily = "Press Start 2P";
 
@@ -295,7 +297,7 @@ export class PauseScene extends Phaser.Scene {
       "#ffffff",
       null,
       null,
-      true,
+      true
     );
     this.pauseText.setOrigin(0.5);
 
