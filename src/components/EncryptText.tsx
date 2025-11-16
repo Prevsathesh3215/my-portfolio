@@ -32,7 +32,7 @@ const EncryptText: React.FC<EncryptProps> = ({
   }, []);
 
   return (
-    <p className="mx-auto max-w-3xl py-10 text-left">
+    <p className="max-w-3xl py-10 text-left">
       <EncryptedText
         key={revealed ? "revealed" : "encrypted"}
         text={text}

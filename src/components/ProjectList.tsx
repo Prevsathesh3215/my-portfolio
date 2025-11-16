@@ -10,6 +10,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { FaGithub } from "react-icons/fa";
 import { ProjectListProps } from "@/types";
+import EncryptText from "./EncryptText";
 
 export default function ProjectList({ data }: ProjectListProps) {
   {
@@ -18,8 +19,8 @@ export default function ProjectList({ data }: ProjectListProps) {
 
   return (
     <>
-      <div className="flex justify-left">
-        <h3 className="text-3xl text-blue-500 font-retro">{data.headTitle}</h3>
+      <div className="flex justify-start">
+        <EncryptText text={data.headTitle} revealedClassName="text-3xl text-blue-500 font-retro" encryptedClassName="text-3xl text-blue-500 font-retro" />
       </div>
 
       {data.items.map((project, index) => (
