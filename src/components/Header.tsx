@@ -33,7 +33,11 @@ export default function Header() {
             <FaNodeJs />
             Node.js
           </span>
-          . I also leverage Tailwind CSS, Express, Sequelize, and MySQL to
+          . I also leverage 
+          <span className="text-white mx-1">Tailwind CSS</span>,
+          <span className="text-white mx-1">Express</span>, 
+          <span className="text-white mx-1">Sequelize</span>, and 
+          <span className="text-white mx-1">MySQL</span> to
           create fully responsive, high-performance applications that provide
           seamless user experiences.
         </p>

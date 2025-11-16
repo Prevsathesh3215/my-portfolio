@@ -25,7 +25,7 @@ export default function ProjectList({ data }: ProjectListProps) {
       {data.items.map((project, index) => (
         <Card
           key={index}
-          className="bg-gray-900 text-white border-gray-700 my-10 mr-10 bg-gradient-to-r from-sky-950 to-purple-900 before:content-[''] before:inset-0 before:bg-gradient-to-r before:from-sky-950 before:to-purple-900 before:blur-xl before:opacity-70 before:-z"
+          className="bg-gray-900 text-white border-gray-700 my-10 mr-10 bg-gradient-to-r from-yellow-950 to-blue-900 before:content-[''] before:inset-0 before:bg-gradient-to-r before:from-sky-950 before:to-purple-900 before:blur-xl before:opacity-70 before:-z"
         >
           <CardHeader>
             <CardTitle>{project.title}</CardTitle>

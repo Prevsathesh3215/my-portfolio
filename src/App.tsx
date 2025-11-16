@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import ProjectList from "./components/ProjectList";
 import Game from "./components/Game";
 import { projectData, workExperience } from "./configData";
+import Timeline9  from "./components/timeline9";
 
 export default function App() {
   return (
@@ -19,7 +20,8 @@ export default function App() {
           </div>
 
           <div className="w-full mt-16 ml-10">
-            <ProjectList data={workExperience} />
+            <Timeline9 data={workExperience} />
+            {/* <ProjectList data={workExperience} /> */}
             <ProjectList data={projectData} />
             <Game />
           </div>

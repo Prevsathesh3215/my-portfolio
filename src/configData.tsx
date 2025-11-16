@@ -28,7 +28,7 @@ export const projectData: ProjectsData = {
       title: "AI Dating App",
       period: "May 2025",
       desc: [
-        "Created as a project during the LoopHole Hackathon 2025 by Build Club Malaysia, this project involves a dating app that allows integration with an AI 'Wingman'",
+        "Created as a project during the LoopHole Hackathon 2025 by Build Club Malaysia, this project involves a dating app that allows integration with an AI 'Wingman'.",
         "This Wingman judges responses of matches, gives prompts for better pick-up lines, and even rates matches out of 10 points for their personality!",
         "Ran the AI locally first, then deployed the frontend on Render and exposed an API through ngrok that talks to the local AI. As a fallback, connect to an OpenAI API.",
       ],
@@ -83,14 +83,23 @@ export const workExperience: ProjectsData = {
   items: [
     {
       title: "Sunrise Tech Ventures Sdn. Bhd. - Full Stack Software Developer",
-      period: "September 2024 - Present",
+      period: "January 2025 - Present",
       desc: [
         "Designed and deployed backend APIs using Node.js, Express, MySQL, and Sequelize, with secure user authentication and data management.",
         "Involved in testing of production-level software, exposed to UAT and software testing.",
-        "Attended and presented software solution proposal meetings to prospective clients, explaining solution's architecture and features",
+        "Attended and presented software solution proposal meetings to prospective clients, explaining solution's architecture and features.",
         "Involved in testing of company payroll software, assisting client and providing hands-on support during UAT and live phase.",
-        "Providing support for testing phase(bug fixing and handling) during the UAT phases for HR, Marketing and Operations modules",
+        "Providing support for testing phase(bug fixing and handling) during the UAT phases for HR, Marketing and Operations modules.",
       ],
     },
+    {
+      title: "Sunrise Tech Ventures Sdn. Bhd. - Intern",
+      period: "September 2024 - December 2024",
+      desc: [
+        "Designed and deployed backend APIs using Node.js, Express, MySQL, and Sequelize, with secure user authentication and data management.",
+        "Built and tested RESTful APIs integrated with third-party services, deploying to Render and ensuring reliable performance.",
+        "Involved in testing of production-level software, exposed to UAT and software testing."
+      ]
+    }
   ],
 };
