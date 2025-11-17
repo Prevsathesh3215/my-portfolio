@@ -1,6 +1,12 @@
 import { useRef, useState } from "react";
 import { Button } from "./ui/button";
 import { FaMusic } from "react-icons/fa";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+  TooltipProvider,
+} from "@/components/ui/tooltip";
 
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -26,8 +32,19 @@ export default function MusicPlayer() {
   };
 
   return (
-    <Button onClick={toggleMusic} variant="ghost" size="icon">
-      <FaMusic className={isPlaying ? "text-green-500" : "text-red-500"} />
-    </Button>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button onClick={toggleMusic} variant="ghost" size="icon">
+            <FaMusic
+              className={isPlaying ? "text-green-500" : "text-red-500"}
+            />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Click for a nostalgic suprise!</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
