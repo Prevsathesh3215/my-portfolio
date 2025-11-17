@@ -1,11 +1,10 @@
-// npm run deploy to deploy new versions
 import MyParticles from "./components/MyParticles";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
 import ProjectList from "./components/ProjectList";
 import Game from "./components/Game";
 import { projectData, workExperience } from "./configData";
-import Timeline9  from "./components/timeline9";
+import Timeline9 from "./components/timeline9";
 
 export default function App() {
   return (
@@ -15,14 +14,18 @@ export default function App() {
       <div className="relative z-10">
         <NavBar />
         <main className="flex flex-col items-center px-6 space-y-16">
-          <div className="flex flex-col items-center mt-20">
+          <section id="about" className="flex flex-col items-center mt-20">
             <Header />
-          </div>
+          </section>
 
           <div className="w-full mt-16 ml-10">
-            <Timeline9 data={workExperience} />
+            <section id="work">
+              <Timeline9 data={workExperience} />
+            </section>
             {/* <ProjectList data={workExperience} /> */}
-            <ProjectList data={projectData} />
+            <section id="projects">
+              <ProjectList data={projectData} />
+            </section>
             <Game />
           </div>
         </main>

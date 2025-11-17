@@ -1,8 +1,20 @@
 import { FaCode, FaReact } from "react-icons/fa";
 import { Button } from "./ui/button";
 import { FaGithub } from "react-icons/fa";
+import MusicPlayer from "./MusicPlayer";
+
 
 export default function NavBar() {
+  const playMusic = () => {
+    const audio = new Audio(
+      import.meta.env.BASE_URL + "assets" + "/pokemon.mp3"
+    );
+    audio.loop = true;
+    audio.play().catch(() => {
+      console.log("Autoplay blocked, waiting for user interaction.");
+    });
+  };
+
   return (
     <>
       <nav className="top-0 left-0 justify-between flex flex-row w-full">
@@ -23,14 +35,46 @@ export default function NavBar() {
 
         {/**Welp, I first deployed here, 0210 hrs, 15/11/2025. Gg need to work on this tho */}
         <div className="flex justify-right mx-2 gap-2 mt-2">
-          <Button onClick={() => window.open("https://github.com/Prevsathesh3215/my-portfolio", "_blank")}>
+          <MusicPlayer />
+          <Button
+            onClick={() =>
+              window.open(
+                "https://github.com/Prevsathesh3215/my-portfolio",
+                "_blank"
+              )
+            }
+          >
             {" "}
             <FaGithub />
             View the code
           </Button>
-          <Button>About</Button>
-          <Button>Projects</Button>
-          <Button>Contact</Button>
+          <Button
+            onClick={() =>
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            About
+          </Button>
+          <Button
+            onClick={() =>
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Projects
+          </Button>
+          <Button
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Contact
+          </Button>
         </div>
       </nav>
     </>

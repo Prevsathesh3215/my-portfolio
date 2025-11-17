@@ -11,12 +11,22 @@ import { ProjectListProps } from "@/types";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { FaGithub } from "react-icons/fa";
+import EncryptText from "./EncryptText";
+
 
 export default function Timeline9({ data }: ProjectListProps) {
   return (
     <section>
       <div>
-        <h1 className="font-retro text-blue-500 text-3xl">{data.headTitle}</h1>
+        {/* <h1 className="font-retro text-blue-500 text-3xl">{data.headTitle}</h1> */}
+
+        <div className="flex justify-start">
+          <EncryptText
+            text={data.headTitle}
+            revealedClassName="text-3xl text-blue-500 font-retro"
+            encryptedClassName="text-3xl text-blue-500 font-retro"
+          />
+        </div>
 
         <div className="relative mt-10 mr-10">
           {/* Vertical Line */}

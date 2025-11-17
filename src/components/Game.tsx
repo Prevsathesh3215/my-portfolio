@@ -1,10 +1,11 @@
-// src/components/Game.jsx
 import { useEffect, useRef, useState } from "react";
 import Phaser from "phaser";
 // @ts-ignore
 import "../phaser/main.js";
 // @ts-ignore
 import { gameScenes } from "../phaser/main.js";
+import EncryptText from "./EncryptText";
+
 
 export default function Game() {
   const gameContainer = useRef(null);
@@ -33,9 +34,9 @@ export default function Game() {
 
   return (
     <>
-      <div className="flex mt-20">
-        <h3 className="text-3xl text-blue-500 font-retro">Check out My Game here!</h3>
-      </div>{" "}
+      <div className="flex justify-start">
+        <EncryptText text="Check Out My Game Here!" revealedClassName="text-3xl text-blue-500 font-retro" encryptedClassName="text-3xl text-blue-500 font-retro" />
+      </div>
       <div
         ref={gameContainer}
         style={{
