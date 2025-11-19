@@ -5,6 +5,7 @@ import ProjectList from "./components/ProjectList";
 import Game from "./components/Game";
 import { projectData, workExperience } from "./configData";
 import Timeline9 from "./components/timeline9";
+import ContactPage from "./components/Contact";
 
 export default function App() {
   return (
@@ -27,6 +28,10 @@ export default function App() {
               <ProjectList data={projectData} />
             </section>
             <Game />
+
+            <section id="contact">
+              <ContactPage />
+            </section>
           </div>
         </main>
       </div>
