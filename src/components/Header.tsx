@@ -9,7 +9,7 @@ export default function Header() {
       <div className="relative p-[3px] rounded-full bg-gradient-to-r from-blue-500 to-purple-500 before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-blue-500 before:to-purple-500 before:blur-xl before:opacity-70 before:-z-10 mt-20 mb-10">
         <Avatar className="w-[200px] h-[200px]">
           <AvatarImage src={faceImg} />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarFallback>FACE</AvatarFallback>
         </Avatar>
       </div>
 
@@ -20,6 +20,7 @@ export default function Header() {
       />
 
       <div className="max-w-6xl">
+
         <p className="text-xl mt-8 text-center text-gray-400">
           I'm a full-stack software engineer specializing in web development,
           with skills in
