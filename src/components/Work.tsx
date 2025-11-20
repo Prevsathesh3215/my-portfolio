@@ -14,7 +14,7 @@ import { FaGithub } from "react-icons/fa";
 import EncryptText from "./EncryptText";
 
 
-export default function Timeline9({ data }: ProjectListProps) {
+export default function Work({ data }: ProjectListProps) {
   return (
     <section>
       <div>
@@ -28,7 +28,7 @@ export default function Timeline9({ data }: ProjectListProps) {
           />
         </div>
 
-        <div className="relative mt-10 mr-10">
+        <div className="relative mt-1 mr-10">
           {/* Vertical Line */}
           <Separator
             orientation="vertical"

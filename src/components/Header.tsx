@@ -13,7 +13,11 @@ export default function Header() {
         </Avatar>
       </div>
 
-      <EncryptText text="Hi, I'm Sathesh" revealedClassName="font-retro text-blue-500 text-5xl" encryptedClassName="font-retro text-blue-500 text-5xl" />
+      <EncryptText
+        text="Hi, I'm Sathesh"
+        revealedClassName="font-retro text-blue-500 text-5xl"
+        encryptedClassName="font-retro text-blue-500 text-5xl"
+      />
 
       <div className="max-w-6xl">
         <p className="text-xl mt-8 text-center text-gray-400">
@@ -33,25 +37,30 @@ export default function Header() {
             <FaNodeJs />
             Node.js
           </span>
-          . I also leverage 
+          . I also leverage
           <span className="text-white mx-1">Tailwind CSS</span>,
-          <span className="text-white mx-1">Express</span>, 
-          <span className="text-white mx-1">Sequelize</span>, and 
-          <span className="text-white mx-1">MySQL</span> to
-          create fully responsive, high-performance applications that provide
-          seamless user experiences.
+          <span className="text-white mx-1">Express</span>,
+          <span className="text-white mx-1">Sequelize</span>, and
+          <span className="text-white mx-1">MySQL</span> to create fully
+          responsive, high-performance applications that provide seamless user
+          experiences.
         </p>
       </div>
 
       {/*Idk what the fuck this does to mess up the width of the screen, but when i move it to one div, the screen cuts by half a width, fuck shadcn*/}
-      <p className="text-xl mt-10 text-center text-gray-400">
-        Coming from an enginering background, I am passionate about creating and
-        building projects, from front-end -centred UI design to
-        scalable-and-efficient backend structure design and development. I am
-        also a person who likes to likes to get their hands wet in many
-        different things, and so I've found myself doing side-projects which
-        range from game-design to dating apps and Arduino automation! 😅🤣
-      </p>
+      <div>
+        <p className="text-xl mt-10 text-center text-gray-400">
+          Coming from an enginering background, I am passionate about creating
+          and building projects, from front-end -centred UI design to
+          scalable-and-efficient backend structure design and development. I am
+          also a person who likes to likes to get their hands wet in many
+          different things, and so I've found myself doing side-projects which
+          range from game-design to dating apps and Arduino automation! 😅🤣
+          Other than coding,
+        </p>
+
+        <p className="text-xl mt-10 text-center text-gray-400">Other than coding, I also enjoy playing videogames (FROMSOFTWARE games are my absolute favourite) , painting, sketching and playing music. I also collect mechanical watches! </p>
+      </div>
     </>
   );
 }

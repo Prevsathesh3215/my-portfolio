@@ -4,13 +4,16 @@ import Header from "./components/Header";
 import ProjectList from "./components/ProjectList";
 import Game from "./components/Game";
 import { projectData, workExperience } from "./configData";
-import Timeline9 from "./components/timeline9";
+import Work from "./components/Work";
 import ContactPage from "./components/Contact";
+
+import { Toaster } from "sonner"; 
 
 export default function App() {
   return (
     <div className="relative min-h-screen text-white bg-black">
       <MyParticles />
+      <Toaster richColors position="top-center" />
 
       <div className="relative z-10">
         <NavBar />
@@ -21,12 +24,13 @@ export default function App() {
 
           <div className="w-full mt-16 ml-10">
             <section id="work">
-              <Timeline9 data={workExperience} />
+              <Work data={workExperience} />
             </section>
-            {/* <ProjectList data={workExperience} /> */}
+
             <section id="projects">
               <ProjectList data={projectData} />
             </section>
+
             <Game />
 
             <section id="contact">

@@ -12,9 +12,14 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import emailjs from "@emailjs/browser";
-
+import { toast } from "sonner";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
+
   const inputConfig = [
     {
       type: "text",
@@ -36,35 +41,51 @@ export default function ContactPage() {
     },
   ];
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setLoading(true);
 
     const formData = new FormData(e.target);
     const values = Object.fromEntries(formData);
 
-    console.log("Form Submitted");
-    console.log(values);
+    try {
+      await emailjs.send(
+        "service_zqa78qe",
+        "template_7f8fdfb",
+        {
+          from_name: values.name,
+          reply_to: values.email,
+          message: values.textarea,
+        },
+        "qBsJSIPKNV99jT93e"
+      );
 
-
-      emailjs
-    .send(
-      "service_zqa78qe",
-      "template_7f8fdfb",
-      {
-        from_name: values.name,
-        reply_to: values.email,
-        message: values.textarea,
-      },
-      "qBsJSIPKNV99jT93e"
-    )
-    .then(() => {
-      console.log("Email sent!");
-      alert("Message sent successfully!");
-    })
-    .catch((err) => {
+      toast("Email sent!", {
+        style: {
+          background: "black",
+          color: "white",
+          borderRadius: "10px",
+          borderColor: "gray",
+          boxShadow: "0 0 20px rgba(59,130,246,0.5)",
+          fontSize: "15px",
+          textAlign: "center",
+        },
+        action: {
+          label: "OK",
+          onClick: () => toast.dismiss(),
+        },
+      });
+    } catch (err) {
       console.error("FAILED:", err);
-      alert("Something went wrong. Try again!");
-    });
+      toast.error("Something went wrong, please try again!", {
+        action: {
+          label: "OK",
+          onClick: () => toast.dismiss(),
+        },
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -77,8 +98,38 @@ export default function ContactPage() {
         />
       </div>
 
-      <p className="text-xl mt-8 text-gray-400">
-        You can find me on LinkedIn, Instagram and also Facebook
+      <p className="flex flex-row text-xl mt-1 text-gray-400">
+        You can find me on
+        <a
+          href="https://www.linkedin.com/in/sathesh-previn-377838244/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin
+            size={30}
+            className="ml-2 hover:text-blue-700 transition-colors"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/prevsathesh/?hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaInstagram
+            size={30}
+            className="mx-1 hover:text-pink-500 transition-colors"
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/sathesh.previn/?locale=ms_MY"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFacebook
+            size={30}
+            className="mx-1 hover:text-blue-600 transition-colors"
+          />
+        </a>
       </p>
 
       <Card className="bg-gray-900 text-white border-gray-700 my-10 mr-10 bg-gradient-to-r from-blue-900 to-red-400 before:content-[''] before:inset-0 before:bg-gradient-to-r before:from-sky-950 before:to-blue-900 before:blur-xl before:opacity-70 before:-z">
@@ -119,10 +170,15 @@ export default function ContactPage() {
             ))}
 
             <Button
+              disabled={loading}
               type="submit"
               className="px-6 py-4 h-15 text-lg w-full"
             >
-              Send
+              {loading ? (
+                <Loader2 className="h-12 w-5 animate-spin text-white" />
+              ) : (
+                "Send"
+              )}
             </Button>
           </form>
         </CardContent>
