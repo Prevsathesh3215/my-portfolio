@@ -57,7 +57,6 @@ export default function Header() {
           also a person who likes to likes to get their hands wet in many
           different things, and so I've found myself doing side-projects which
           range from game-design to dating apps and Arduino automation! 😅🤣
-          Other than coding,
         </p>
 
         <p className="text-xl mt-10 text-center text-gray-400">Other than coding, I also enjoy playing videogames (FROMSOFTWARE games are my absolute favourite) , painting, sketching and playing music. I also collect mechanical watches! </p>
