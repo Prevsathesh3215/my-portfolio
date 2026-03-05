@@ -4,6 +4,27 @@ export const projectData: ProjectsData = {
   headTitle: "My Projects",
   items: [
     {
+      title: "WikiGraph: A Wikipedia Knowledge Graph Crawler",
+      period: "February 2026 - March 2026",
+      desc: [
+        "Developed a Python-based web crawler that performs breadth-first crawling on Wikipedia to collect article data and inter-page relationships.",
+        "Extracts article titles, summaries, and internal links using XPath and lxml, while sanitizing and normalizing URLs.",
+        "Constructs a directed knowledge graph representing relationships between Wikipedia articles.",
+        "Implements link filtering to remove non-article pages, duplicates, and irrelevant navigation links.",
+        "Includes graph visualization using PyVis to explore clusters and connections between topics.",
+      ],
+      skills: [
+        "Python",
+        "Web Scraping",
+        "XPath",
+        "lxml",
+        "Graph Data Structures",
+        "BFS Crawling",
+        "Knowledge Graphs",
+        "PyVis",
+      ],
+    },
+    {
       title: (
         <>
           Development of an Admin Module with{" "}
