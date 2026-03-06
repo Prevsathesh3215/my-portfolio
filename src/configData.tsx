@@ -23,6 +23,8 @@ export const projectData: ProjectsData = {
         "Knowledge Graphs",
         "PyVis",
       ],
+      projLink: "https://github.com/Prevsathesh3215/web-crawler/tree/knowledge-graph",
+
     },
     {
       title: (
